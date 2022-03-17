@@ -1,0 +1,28 @@
+Package: gibbonID
+Title: Visualization of acoustic signals
+Version: 1.0.0.1
+Authors@R: 
+    person(given = "Dena",
+           family = "Clink",
+           role = c("aut", "cre"),
+           email = "dena.clink@cornell.edu",
+           comment = "")
+Description: What the package does (coming soon).
+License: `use_mit_license()`, `use_gpl3_license()` or friends to
+    pick a license
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports: 
+    tuneR,
+    stringr,
+    seewave,
+    signal,
+    umap,
+    ggpubr,
+    ggplot2

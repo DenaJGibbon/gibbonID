@@ -1,0 +1,52 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# gibbonID
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of gibbonID is make clustering and visualization of acoustic data in R easy! This package is currently under development with a planned full release later this year (2022).
+
+## Installation
+
+You can install the development version from [GitHub](https://github.com/DenaJGibbon) with:
+```{r eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("DenaJGibbon/gibbonID")
+```
+
+## Example
+
+This is a basic example which shows you how to create a biplot using gibbonID. Our dataset consists of different female Northern Gray gibbons:
+```{r echo=FALSE, message=FALSE}
+devtools::load_all()
+```
+
+
+```{r warning=FALSE, message=FALSE}
+library(gibbonID)
+library(ggpubr)
+
+ExampleBiplot <- gibbonID::UMAPBiplotAddSpectrograms(input.dir.Focal="/Users/denaclink/Desktop/RStudio Projects/gibbonID/data/FocalTest",
+                          output.dir.Focal = "/Users/denaclink/Desktop/RStudio Projects/gibbonID/data/FocalTest/Thumbnails/",
+                          min.freq = 400, max.freq = 1800,main='Female Gibbon Calls')
+
+ 
+```
+
+```{r dpi=300}
+ExampleBiplot 
+```
